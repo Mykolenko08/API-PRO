@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API PRO</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2, h3, b {
+            color: #4C5BFF;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        a {
+            cursor: pointer;
+            color: white;
+        }
+
+        .divider {
+            background-color: #4C5BFF;
+            padding: 1px;
+            margin-top: 5px;
+        }
+
+        .micro_divider {
+            background-color: #ffffff50;
+            padding: 0.5px;
+            margin-top: 5px;
+            width: 120%;
+        }
+
+        header {
+            background-color: #4C5BFF;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .right_container {
+            display: flex;
+            gap: 15px;
+        }
+
+        .acc_button {
+            transition: all 0.2s ease-in-out;
+            color: black;
+            background-color: white;
+            font-weight: 900;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50em;
+            cursor: pointer;
+        }
+
+            .acc_button:hover {
+                color: #4C5BFF;
+            }
+
+        .logo {
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            margin: 5px 10% 0px 10%;
+        }
+
+        .nav_button {
+            transition: all 0.2s ease-in-out;
+            color: black;
+            background-color: white;
+            font-weight: 100;
+            font-size: 18px;
+            padding: 10px 50px 10px 50px;
+            border: 2px solid #4C5BFF;
+            border-radius: 50em;
+            cursor: pointer;
+        }
+
+            .nav_button:hover {
+                color: white;
+                background-color: #4C5BFF;
+            }
+
+        .main_horizontal_container {
+            display: flex;
+        }
+
+        .mhc_left {
+            width: 60%;
+            justify-content: flex-start;
+        }
+
+        .mhc_right {
+            justify-content: flex-end;
+            margin-left: 5em;
+        }
+
+        .plus_margin {
+            margin-top: 100px;
+        }
+
+        .stray_button {
+            transition: background-color 0.15s ease-in-out;
+            margin: 20px;
+            color: white;
+            background-color: #4C5BFF;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 15px 75px 15px 75px;
+            border: none;
+            border-radius: 50em;
+            cursor: pointer;
+        }
+
+            .stray_button:hover {
+                background-color: #2638ff;
+            }
+
+        .team_face_container {
+            display: flex;
+            justify-content: space-between;
+            margin: 0% 3% 0% 3%;
+        }
+
+        .team_name_container {
+            display: flex;
+            gap: 130px;
+            margin-left: 140px;
+        }
+
+        .team_face_container2 {
+            display: flex;
+            justify-content: space-between;
+            margin: 0% 15% 0% 15%;
+            transform: translate(0px, -200px);
+        }
+
+        .team_name_container2 {
+            display: flex;
+            gap: 255px;
+            margin-left: 360px;
+            margin-top: -180px;
+        }
+
+        .team_face {
+            border-radius: 50%;
+            width: 270px;
+            height: 270px;
+            font-weight: 750;
+            color: #4C5BFF;
+        }
+
+        .ul_fix {
+            margin-top: -15px;
+            margin-bottom: 20px;
+        }
+
+        .minus_margin {
+            margin-top: -200px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #4C5BFF;
+            color: white;
+        }
+
+        .footer_center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer_additional {
+            display: flex;
+            justify-content: space-evenly;
+            margin: -7% 38% 0% 38%;
+        }
+
+        .footer_container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer_left {
+            text-align: left;
+            margin-left: 2%;
+            margin-top: -80px;
+        }
+
+        .footer_right {
+            text-align: end;
+            margin-right: 2%;
+            margin-top: -15px;
+        }
+
+        .footer_text_el {
+            margin: 2px 0px;
+        }
+
+        .middle_info {
+            margin-top: 70px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/apipro_logo.png" class="logo" width="60" height="60" alt="api pro logo"></a>
+        <div class="right_container">
+            <button class="acc_button">Sign up</button>
+            <button class="acc_button">Log in</button>
+        </div>
+    </header>
+    <nav>
+        <button onclick="location.href='index.html#who_we_are'" class="nav_button">Хто ми</button>
+        <button onclick="location.href='index.html#order'" class="nav_button">Замовити</button>
+        <button onclick="location.href='index.html#our_team'" class="nav_button">Наша Команда</button>
+        <button onclick="location.href='index.html#job'" class="nav_button">Влаштування</button>
+        <button onclick="location.href='index.html#education'" class="nav_button">Навчання</button>
+        <button onclick="location.href='faq.html'" class="nav_button">FAQ</button>
+    </nav>
+    <div class="divider">
+
+    </div>
+    <main>
+        <h1>Часті Питання</h1>
+        <div class="divider">
+        </div>
+        <p><b>Q: </b>Які послуги надає API PRO?</p>
+        <p><b>A: </b>Ми займаємось розробкою API з нуля, доопрацюванням існуючих рішень, інтеграцією сторонніх сервісів, аудитом безпеки та технічними консультаціями.</p>
+        <div class="divider">
+        </div>
+
+        <p><b>Q: </b>Чи можна замовити лише консультацію без розробки?</p>
+        <p><b>A: </b>Так, ми надаємо консультації щодо архітектури, вибору технологій, оптимізації та безпеки API.</p>
+        <div class="divider">
+        </div>
+
+        <p><b>Q: </b>Які типи API ви розробляєте?</p>
+        <p><b>A: </b>Ми працюємо з REST API, а також можемо реалізовувати інші підходи залежно від задачі проєкту.</p>
+        <div class="divider">
+        </div>
+
+        <p><b>Q: </b>Чи працюєте ви з уже готовими проєктами?</p>
+        <p><b>A: </b>Так, ми можемо доопрацьовувати, оптимізувати або виправляти існуючі API та бекенд-рішення.</p>
+        <div class="divider">
+        </div>
+
+        <p><b>Q: </b>Скільки часу займає розробка API?</p>
+        <p><b>A: </b>Терміни залежать від складності проєкту, обсягу функціоналу та вимог, тому визначаються після аналізу заявки.</p>
+        <div class="divider">
+        </div>
+
+        <p><b>Q: </b>Чи є у вас безкоштовні курси?</p>
+        <p><b>A: </b>Так, API PRO надає безкоштовні курси, які допомагають вивчити як основи, так і практичні аспекти роботи з API.</p>
+        <div class="divider">
+        </div>
+
+        <p><b>Q: </b>Чи можна приєднатися до команди без досвіду?</p>
+        <p><b>A: </b>Так, ми розглядаємо кандидатів без великого досвіду, якщо є бажання вчитись і розвиватись через практику.</p>
+        <div class="divider">
+        </div>
+
+        <p><b>Q: </b>Як відбувається процес замовлення?</p>
+        <p><b>A: </b>Ви заповнюєте форму, після чого ми аналізуємо ваш запит, уточнюємо деталі та пропонуємо варіант реалізації.</p>
+        <div class="divider">
+        </div>
+
+        <p><b>Q: </b>Чи надаєте ви підтримку після розробки?</p>
+        <p><b>A: </b>Так, ми можемо забезпечити подальшу підтримку, оновлення та розвиток API після завершення проєкту.</p>
+        <div class="divider">
+        </div>
+
+        <p><b>Q: </b>Яку інформацію потрібно вказати при замовленні?</p>
+        <p><b>A: </b>Бажано описати ідею проєкту, задачі, наявний стан розробки, а також терміни і бюджет, якщо вони відомі.</p>
+        <div class="divider">
+        </div>
+        <br>
+        <h2>Залишилися питання?</h2>
+        <button href="LINKHERE!!!!!!!!!!" class="stray_button">Запитати</button>
+
+
+        <br>
+        <a href="index.html" class="plus_margin"><h3><u>Повернутися</u></h3></a>
+        <br>
+
+    </main>
+    <br>
+    <footer>
+        <a href="index.html" class="footer_center"><img src="images/apipro_logo.png" width="80" alt="logo"></a>
+        <br>
+        <div class="footer_container">
+            <div class="footer_left">
+                <p class="footer_text_el">Отримати допомогу:</p>             <p class="footer_text_el">Telegram: @apipro</p>
+                <p class="footer_text_el">Youtube: @apipro</p>
+                <p class="footer_text_el">Instagram: @apipro</p>
+                <div class="micro_divider"></div>
+                <p class="footer_text_el">Зв’язок: +380 95 000 00 00</p>
+                <p class="footer_text_el">Пошта: support@apipro.com</p>
+            </div>
+            <div class="footer_right">
+                <div><a href="https://thispersonnotexist.org/" class="footer_text_el">AI Обличча: thispersonnotexist.org</a></div>
+                <div><a href="https://www.shutterstock.com/" class="footer_text_el">Деякі зображення: shutterstock.com</a></div>
+                <div><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc0CGL3yPvhG9pnyg1wV67zZzMc88fqjQgsQ&s" class="footer_text_el">Одне з зобажень</a></div>
+                <div><a href="https://www.theglobeandmail.com/resizer/v2/56OQNIOEVZAFPOXYTCCEQOYL4M.jpg?auth=eca2718378a0d7bf2c6f16328c0979f568377cc7c4084e6bc834053e5d530533&width=1200&quality=80" class="footer_text_el">Одне з зобажень</a></div>
+            </div>
+        </div>
+        <br>
+        <div class="middle_info">
+            <div class="footer_additional">
+                <u><a>Terms of Service</a></u>
+                <u><a>Privacy</a></u>
+                <u><a>Policy & Safety</a></u>
+                <u><a href="faq.html">FAQ</a></u>
+            </div>
+            <p class="footer_center">&copy; 2026 API PRO</p>
+            <br>
+        </div>
+    </footer>
+</body>
+</html>

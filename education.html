@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API PRO</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2, h3, b {
+            color: #4C5BFF;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        a {
+            cursor: pointer;
+            color: white;
+        }
+
+        .divider {
+            background-color: #4C5BFF;
+            padding: 1px;
+            margin-top: 5px;
+        }
+
+        .micro_divider {
+            background-color: #ffffff50;
+            padding: 0.5px;
+            margin-top: 5px;
+            width: 120%;
+        }
+
+        header {
+            background-color: #4C5BFF;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .right_container {
+            display: flex;
+            gap: 15px;
+        }
+
+        .acc_button {
+            transition: all 0.2s ease-in-out;
+            color: black;
+            background-color: white;
+            font-weight: 900;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50em;
+            cursor: pointer;
+        }
+
+            .acc_button:hover {
+                color: #4C5BFF;
+            }
+
+        .logo {
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            margin: 5px 10% 0px 10%;
+        }
+
+        .nav_button {
+            transition: all 0.2s ease-in-out;
+            color: black;
+            background-color: white;
+            font-weight: 100;
+            font-size: 18px;
+            padding: 10px 50px 10px 50px;
+            border: 2px solid #4C5BFF;
+            border-radius: 50em;
+            cursor: pointer;
+        }
+
+            .nav_button:hover {
+                color: white;
+                background-color: #4C5BFF;
+            }
+
+        .main_horizontal_container {
+            display: flex;
+        }
+
+        .mhc_left {
+            width: 60%;
+            justify-content: flex-start;
+        }
+
+        .mhc_right {
+            justify-content: flex-end;
+            margin-left: 5em;
+        }
+
+        .plus_margin {
+            margin-top: 100px;
+        }
+
+        .stray_button {
+            transition: background-color 0.15s ease-in-out;
+            margin: 20px;
+            color: white;
+            background-color: #4C5BFF;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 15px 75px 15px 75px;
+            border: none;
+            border-radius: 50em;
+            cursor: pointer;
+        }
+
+            .stray_button:hover {
+                background-color: #2638ff;
+            }
+
+        .order_form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin-top: 20px;
+        }
+
+            .order_form input, .order_form textarea, .order_form select {
+                padding: 12px 18px;
+                border-radius: 25px;
+                border: 2px solid #4C5BFF;
+                font-size: 14px;
+                font-family: Arial, sans-serif;
+                outline: none;
+            }
+
+            .order_form textarea {
+                border-radius: 20px;
+                resize: vertical;
+            }
+
+                .order_form input:focus, .order_form textarea:focus, .order_form select:focus {
+                    border-color: #2638ff;
+                }
+
+        .course_container {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 2px;
+            align-items: center;
+        }
+
+        .course {
+            width: 600px;
+            height: 600px;
+            color: #4C5BFF;
+            margin: 0;
+            position: relative;
+        }
+
+            .course img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+        .course_label {
+            position: absolute;
+            bottom: 1%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            padding: 10px 20px 12px;
+            border-radius: 16px;
+            white-space: nowrap;
+        }
+
+        .course_name {
+            font-weight: 700;
+            font-size: 14px;
+            color: #4C5BFF;
+            text-align: center;
+        }
+
+        .course_price {
+            font-size: 16px;
+            font-weight: 900;
+            color: #2638ff;
+        }
+
+        .course_cart_btn {
+            transition: background-color 0.15s ease-in-out;
+            color: white;
+            background-color: #4C5BFF;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 8px 18px;
+            border: none;
+            border-radius: 50em;
+            cursor: pointer;
+            width: 100%;
+        }
+
+            .course_cart_btn:hover {
+                background-color: #2638ff;
+            }
+
+        .course_details {
+            font-size: 13px;
+            color: #4C5BFF;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .ul_fix {
+            margin-top: -15px;
+            margin-bottom: 20px;
+        }
+
+        .minus_margin {
+            margin-top: -200px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #4C5BFF;
+            color: white;
+        }
+
+        .footer_center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer_additional {
+            display: flex;
+            justify-content: space-evenly;
+            margin: -7% 38% 0% 38%;
+        }
+
+        .footer_container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer_left {
+            text-align: left;
+            margin-left: 2%;
+            margin-top: -80px;
+        }
+
+        .footer_right {
+            text-align: end;
+            margin-right: 2%;
+            margin-top: -15px;
+        }
+
+        .footer_text_el {
+            margin: 2px 0px;
+        }
+
+        .middle_info {
+            margin-top: 70px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/apipro_logo.png" class="logo" width="60" height="60" alt="api pro logo"></a>
+        <div class="right_container">
+            <button class="acc_button">Sign up</button>
+            <button class="acc_button">Log in</button>
+        </div>
+    </header>
+    <nav>
+        <button onclick="location.href='index.html#who_we_are'" class="nav_button">Хто ми</button>
+        <button onclick="location.href='index.html#order'" class="nav_button">Замовити</button>
+        <button onclick="location.href='index.html#our_team'" class="nav_button">Наша Команда</button>
+        <button onclick="location.href='index.html#job'" class="nav_button">Влаштування</button>
+        <button onclick="location.href='index.html#education'" class="nav_button">Навчання</button>
+        <button onclick="location.href='faq.html'" class="nav_button">FAQ</button>
+    </nav>
+    <div class="divider">
+
+    </div>
+
+
+
+    <main>
+        <h1>Вивчайте API разом з API PRO!</h1>
+        <h2>Оберіть курс, який Ви хотіли б придбати</h2>
+
+        <div class="course_container">
+            <div class="course">
+                <img src="images/b_course1.png" alt="course1">
+                <div class="course_label">
+                    <div class="course_name">API - Beginner Курс</div>
+                    <div class="course_price">1,099 ₴</div>
+                    <button class="course_cart_btn">Додати до кошика</button>
+                    <u class="course_details">Детальніше</u>
+                </div>
+            </div>
+            <div class="course">
+                <img src="images/b_course2.png" alt="course2">
+                <div class="course_label">
+                    <div class="course_name">API - Intermediate Курс</div>
+                    <div class="course_price">1,599 ₴</div>
+                    <button class="course_cart_btn">Додати до кошика</button>
+                    <u class="course_details">Детальніше</u>
+                </div>
+            </div>
+            <div class="course">
+                <img src="images/b_course3.png" alt="course3">
+                <div class="course_label">
+                    <div class="course_name">API - Advanced Курс</div>
+                    <div class="course_price">1,899 ₴</div>
+                    <button class="course_cart_btn">Додати до кошика</button>
+                    <u class="course_details">Детальніше</u>
+                </div>
+            </div>
+            <div class="course">
+                <img src="images/b_course4.png" alt="course4">
+                <div class="course_label">
+                    <div class="course_name">API - Proffesional Курс</div>
+                    <div class="course_price">2,199 ₴</div>
+                    <button class="course_cart_btn">Додати до кошика</button>
+                    <u class="course_details">Детальніше</u>
+                </div>
+            </div>
+            <div class="course">
+                <img src="images/b_course5.png" alt="course5">
+                <div class="course_label">
+                    <div class="course_name">API - Extras</div>
+                    <div class="course_price">1,499 ₴</div>
+                    <button class="course_cart_btn">Додати до кошика</button>
+                    <u class="course_details">Детальніше</u>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="margin-left: 40px; margin-bottom: -10px;">Обрано 0 товарів</h3>
+        <button onclick="location.href='education.html'" class="stray_button">Сплатити</button>
+    </main>
+    <br>
+    <footer>
+        <a href="index.html" class="footer_center"><img src="images/apipro_logo.png" width="80" alt="logo"></a>
+        <br>
+        <div class="footer_container">
+            <div class="footer_left">
+                <p class="footer_text_el">Отримати допомогу:</p>                 <p class="footer_text_el">Telegram: @apipro</p>
+                <p class="footer_text_el">Youtube: @apipro</p>
+                <p class="footer_text_el">Instagram: @apipro</p>
+                <div class="micro_divider"></div>
+                <p class="footer_text_el">Зв’язок: +380 95 000 00 00</p>
+                <p class="footer_text_el">Пошта: support@apipro.com</p>
+            </div>
+            <div class="footer_right">
+                <div><a href="https://thispersonnotexist.org/" class="footer_text_el">AI Обличча: thispersonnotexist.org</a></div>
+                <div><a href="https://www.shutterstock.com/" class="footer_text_el">Деякі зображення: shutterstock.com</a></div>
+                <div><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc0CGL3yPvhG9pnyg1wV67zZzMc88fqjQgsQ&s" class="footer_text_el">Одне з зобажень</a></div>
+                <div><a href="https://www.theglobeandmail.com/resizer/v2/56OQNIOEVZAFPOXYTCCEQOYL4M.jpg?auth=eca2718378a0d7bf2c6f16328c0979f568377cc7c4084e6bc834053e5d530533&width=1200&quality=80" class="footer_text_el">Одне з зобажень</a></div>
+            </div>
+        </div>
+        <br>
+        <div class="middle_info">
+            <div class="footer_additional">
+                <u><a>Terms of Service</a></u>
+                <u><a>Privacy</a></u>
+                <u><a>Policy & Safety</a></u>
+                <u><a href="faq.html">FAQ</a></u>
+            </div>
+            <p class="footer_center">&copy; 2026 API PRO</p>
+            <br>
+        </div>
+    </footer>
+</body>
+</html>
